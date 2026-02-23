@@ -304,7 +304,7 @@ function initAutoplay(products) {
 
 /* ── MAIN RENDER ── */
 /* Fetches portfolio-content.json then renders the full page  */
-fetch(window.location.pathname.replace(/\/[^/]*$/, "/") + "portfolio-content.json")
+fetch("./portfolio-content.json")
   .then(res => {
     if (!res.ok) throw new Error("Could not load portfolio-content.json");
     return res.json();
@@ -325,4 +325,5 @@ fetch(window.location.pathname.replace(/\/[^/]*$/, "/") + "portfolio-content.jso
       "<div style='padding:4rem 5vw;color:#b8955a;font-family:monospace;font-size:0.85rem'>" +
       "Could not load portfolio-content.json — make sure the file is in the same folder as index.html</div>";
   });
+
 
